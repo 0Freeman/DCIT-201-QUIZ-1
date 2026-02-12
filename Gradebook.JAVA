@@ -22,11 +22,25 @@ public class Gradebook {
         }
     }
 
+    public static void displayPerformanceMessage(char grade) {
+        if (grade == 'A') {
+            System.out.println("Excellent work!");
+        } else if (grade == 'B') {
+            System.out.println("Good job!");
+        } else if (grade == 'C') {
+            System.out.println("Average performance.");
+        } else if (grade == 'D') {
+            System.out.println("You need to improve.");
+        } else {
+            System.out.println("You failed.");
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println(calculateLetterGrade(95));
-        System.out.println(calculateLetterGrade(85));
-        System.out.println(calculateLetterGrade(75));
-        System.out.println(calculateLetterGrade(65));
-        System.out.println(calculateLetterGrade(55));
+        displayPerformanceMessage('A');
+        displayPerformanceMessage('B');
+        displayPerformanceMessage('C');
+        displayPerformanceMessage('D');
+        displayPerformanceMessage('F');
     }
 }
