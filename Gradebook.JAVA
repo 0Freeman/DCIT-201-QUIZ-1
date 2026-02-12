@@ -50,20 +50,19 @@ public class Gradebook {
         return sum / scores.length;
     }
 
-    // --- MAIN METHOD TO TEST EVERYTHING ---
     public static void main(String[] args) {
         System.out.println("=== TEST QUESTION 1 ===");
         executeGradeReport(85);
         executeGradeReport(120);
 
         System.out.println("\n=== TEST QUESTION 2 ===");
-        // Test Version 1 (Two scores)
+    
         System.out.println("Average of 80 and 90 is: " + calculateClassAverage(80, 90));
 
-        // Test Version 2 (Three scores)
+    
         System.out.println("Average of 70, 80, 90 is: " + calculateClassAverage(70, 80, 90));
 
-        // Test Version 3 (Array of scores)
+    
         double[] myScores = {50, 60, 70, 80, 90};
         System.out.println("Average of array is: " + calculateClassAverage(myScores));
     }
