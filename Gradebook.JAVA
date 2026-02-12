@@ -1,3 +1,4 @@
+
 public class Gradebook {
 
     public static boolean validateScore(double score) {
@@ -36,11 +37,26 @@ public class Gradebook {
         }
     }
 
+    // --- The Manager Method (Question 1) ---
+    public static void executeGradeReport(double score) {
+        if (validateScore(score) == false) {
+            System.out.println("Invalid Score");
+            return;
+        }
+
+        char grade = calculateLetterGrade(score);
+        System.out.println("Grade: " + grade);
+        displayPerformanceMessage(grade);
+    }
+
     public static void main(String[] args) {
-        displayPerformanceMessage('A');
-        displayPerformanceMessage('B');
-        displayPerformanceMessage('C');
-        displayPerformanceMessage('D');
-        displayPerformanceMessage('F');
+        System.out.println("--- Test 1: Score 85 ---");
+        executeGradeReport(85);
+
+        System.out.println("\n--- Test 2: Score 120 ---");
+        executeGradeReport(120);
+
+        System.out.println("\n--- Test 3: Score -5 ---");
+        executeGradeReport(-5);
     }
 }
