@@ -1,0 +1,48 @@
+public class GradingSystem {
+
+    public static void main(String[] args) {}
+    
+        public void executeGradeReport(double score){
+
+          
+            if(validateScore(score) !=true){
+                System.out.println("Invalid Score");
+                return;
+            }
+
+            char grade = calculateLetterGrade(score);
+
+            displayPerformanceMessage(grade);
+        }
+
+          public double calculateClassAverage(double s1, double s2) {
+           return (s1 + s2) / 2.0;
+         }
+
+        public double calculateClassAverage(double s1, double s2, double s3) {
+        return (s1 + s2 + s3) / 3.0;
+        }
+
+        public double calculateClassAverage(double[] scores) {
+          if (scores == null || scores.length == 0) {
+            return 0.0;
+            }
+            double totalScores = 0;
+            for (int i = 0; i < scores.length; i++) {
+            totalScores += scores[i];
+            }
+        return totalScores / scores.length;
+        
+        }
+
+        public boolean validateScore(double score) {
+        return score >=0 && score<=100;
+        }
+
+    public char calculateLetterGrade(double score) {
+    if (score >= 50) return 'P'; // Pass
+    return 'F'; // Fail
+    }
+
+    public void displayPerformanceMessage(char grade) {}
+}
