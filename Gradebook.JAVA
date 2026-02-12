@@ -8,9 +8,25 @@ public class Gradebook {
         }
     }
 
+    public static char calculateLetterGrade(double score) {
+        if (score >= 90) {
+            return 'A';
+        } else if (score >= 80) {
+            return 'B';
+        } else if (score >= 70) {
+            return 'C';
+        } else if (score >= 60) {
+            return 'D';
+        } else {
+            return 'F';
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println(validateScore(85));
-        System.out.println(validateScore(-10));
-        System.out.println(validateScore(105));
+        System.out.println(calculateLetterGrade(95));
+        System.out.println(calculateLetterGrade(85));
+        System.out.println(calculateLetterGrade(75));
+        System.out.println(calculateLetterGrade(65));
+        System.out.println(calculateLetterGrade(55));
     }
 }
