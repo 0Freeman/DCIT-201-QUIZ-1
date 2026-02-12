@@ -1,6 +1,5 @@
 public class Gradebook {
 
-    // --- HELPER METHODS FOR QUESTION 1 ---
     public static boolean validateScore(double score) {
         if (score < 0 || score > 100) {
             return false;
@@ -24,7 +23,6 @@ public class Gradebook {
         else System.out.println("You failed.");
     }
 
-    // --- QUESTION 1: EXECUTE GRADE REPORT ---
     public static void executeGradeReport(double score) {
         if (!validateScore(score)) {
             System.out.println("Invalid Score");
@@ -35,19 +33,15 @@ public class Gradebook {
         displayPerformanceMessage(grade);
     }
 
-    // --- QUESTION 2: CALCULATE CLASS AVERAGE (Overloading) ---
 
-    // Version 1: Takes two scores
     public static double calculateClassAverage(double score1, double score2) {
         return (score1 + score2) / 2;
     }
 
-    // Version 2: Takes three scores
     public static double calculateClassAverage(double score1, double score2, double score3) {
         return (score1 + score2 + score3) / 3;
     }
 
-    // Version 3: Takes an array (list) of scores
     public static double calculateClassAverage(double[] scores) {
         double sum = 0;
         for (int i = 0; i < scores.length; i++) {
